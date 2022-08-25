@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Codejam</title>
 </head>
 <body>
+    <h1 class="title">Eldritch Horror</h1>
+    <div class="wrapper">
+        <div class="card1">
+            <img class="card-img" src="assets/Ancients/Azathoth.jpg" alt="Azathoth card">
+        </div>    
     
+        <div class="card2">
+            <img class="card-img" src="assets/Ancients/Cthulthu.jpg" alt="Cthulthu card">
+        </div>   
+    
+        <div class="card3">
+            <img class="card-img" src="assets/Ancients/IogSothoth.jpg" alt="IogSothothcard">
+        </div>    
+    
+        <div class="card4">
+            <img class="card-img" src="assets/Ancients/ShubNiggurath.jpg" alt="ShubNiggurath card">
+        </div>               
+    </div>
+    <h2 class="h2">Select difficulty & ancient</h2>
+    <div class="container-level">        
+        <button class="level-button">Very Easy</button>
+        <button class="level-button">Easy</button>
+        <button class="level-button">Normal</button>
+        <button class="level-button">Hard</button>
+        <button class="level-button">Very Hard</button>
+    </div>
+    <button class="shuffle-cards">Shuffle cards</button>    
+</div>
+<div class="play-zone">
+    <div class="halfs">
+        <div class="half1">
+            <div class="card-text">"Azathoth"</div>
+            <div class="level-text">Level "Easy"</div>
+            <div class="steps">
+                <p>I</p>
+                <div class="green1"></div>
+                <div class="brown1"></div>
+                <div class="blue1"></div>
+            </div>
+            <div class="steps">
+                <p>II</p>
+                <div class="green2"></div>
+                <div class="brown2"></div>
+                <div class="blue2"></div>
+            </div>
+            <div class="steps">
+                <p>III</p>
+                <div class="green3"></div>
+                <div class="brown3"></div>
+                <div class="blue3"></div>
+            </div>
+        </div>
+        <div class="half2">
+            <h3>Mythic cards</h3>
+            <div class="deck-wrapper">
+                <div class="shirt">
+                    <img class="card-shirt" src="./assets/photo1661329989.jpeg" alt="Card shirt">
+                </div>
+                <div class="deck"></div>
+            </div>
+        </div>
+    </div>
+    <button class="back-button">Back</button>
+</div>
+    <script type="module" src="index.js"></script>
 </body>
 </html>

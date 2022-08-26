@@ -420,13 +420,12 @@ for (let i = 0; i < levelButton.length; i++) {
     }
 }
 
-function level() {
-    if (levelNum === 0) { document.querySelector('.level-text').innerHTML = 'Level "Very easy"' }
-    if (levelNum === 1) { document.querySelector('.level-text').innerHTML = 'Level "Easy"' }
-    if (levelNum === 2) { document.querySelector('.level-text').innerHTML = 'Level "Normal"' }
-    if (levelNum === 3) { document.querySelector('.level-text').innerHTML = 'Level "Hard"' }
-    if (levelNum === 4) { document.querySelector('.level-text').innerHTML = 'Level "Very hard"' }
+function level() {    
+    if (levelNum === 0) { document.querySelector('.level-text').innerHTML = 'Level "Easy"' }
+    if (levelNum === 1) { document.querySelector('.level-text').innerHTML = 'Level "Normal"' }
+    if (levelNum === 2) { document.querySelector('.level-text').innerHTML = 'Level "Hard"' }    
 }
+level()
 
 
 
@@ -462,104 +461,345 @@ let ancientChoiseArr = []
 let ancientChoiseSubArr = []
 
 function ancientChoise() {
-
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.greenCards) {
-        let r = Math.floor(Math.random() * cardsDataGreen.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataGreen[l].id)
+    //---------------------Easy level------------------------------------------------//
+    if (levelNum === 0) {
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                    if (cardsDataGreen[l].difficulty === 'easy' || cardsDataGreen[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataGreen[l].id)
+                    }
+                
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.brownCards) {
-        let r = Math.floor(Math.random() * cardsDataBrown.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataBrown[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                    if (cardsDataBrown[l].difficulty === 'easy' || cardsDataBrown[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBrown[l].id)
+                    }
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.blueCards) {
-        let r = Math.floor(Math.random() * cardsDataBlue.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataBlue[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                    if (cardsDataBlue[l].difficulty === 'easy' || cardsDataBlue[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBlue[l].id)
+                    }
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.greenCards) {
-        let r = Math.floor(Math.random() * cardsDataGreen.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataGreen[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                    if (cardsDataGreen[l].difficulty === 'easy' || cardsDataGreen[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataGreen[l].id)
+                    }
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.brownCards) {
-        let r = Math.floor(Math.random() * cardsDataBrown.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataBrown[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                    if (cardsDataBrown[l].difficulty === 'easy' || cardsDataBrown[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBrown[l].id)
+                    }
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.blueCards) {
-        let r = Math.floor(Math.random() * cardsDataBlue.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataBlue[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                    if (cardsDataBlue[l].difficulty === 'easy' || cardsDataBlue[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBlue[l].id)
+                    }
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.greenCards) {
-        let r = Math.floor(Math.random() * cardsDataGreen.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataGreen[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                    if (cardsDataGreen[l].difficulty === 'easy' || cardsDataGreen[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataGreen[l].id)
+                    }
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.brownCards) {
-        let r = Math.floor(Math.random() * cardsDataBrown.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataBrown[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                    if (cardsDataBrown[l].difficulty === 'easy' || cardsDataBrown[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBrown[l].id)
+                    }
+            }
         }
-    }
-    ancientChoiseArr.push(ancientChoiseSubArr)
-
-    ancientChoiseSubArr = []
-    while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.blueCards) {
-        let r = Math.floor(Math.random() * cardsDataBlue.length)
-        let l = r
-        if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
-            ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
-            ancientChoiseSubArr.push(cardsDataBlue[l].id)
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                    if (cardsDataBlue[l].difficulty === 'easy' || cardsDataBlue[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBlue[l].id)
+                    }
+            }
         }
+        ancientChoiseArr.push(ancientChoiseSubArr)
     }
-    ancientChoiseArr.push(ancientChoiseSubArr)
+    //---------------------Normal level------------------------------------------------//
+    else if (levelNum === 1){
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataGreen[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataBrown[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataBlue[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataGreen[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataBrown[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataBlue[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataGreen[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataBrown[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                ancientChoiseSubArr.push(cardsDataBlue[l].id)
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    }
+    //---------------------Hard level------------------------------------------------//
+    else if (levelNum === 2) {
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                    if (cardsDataGreen[l].difficulty === 'hard' || cardsDataGreen[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataGreen[l].id)
+                    }
+                
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                    if (cardsDataBrown[l].difficulty === 'hard' || cardsDataBrown[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBrown[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].firstStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                    if (cardsDataBlue[l].difficulty === 'hard' || cardsDataBlue[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBlue[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                    if (cardsDataGreen[l].difficulty === 'hard' || cardsDataGreen[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataGreen[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                    if (cardsDataBrown[l].difficulty === 'hard' || cardsDataBrown[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBrown[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].secondStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                    if (cardsDataBlue[l].difficulty === 'hard' || cardsDataBlue[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBlue[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.greenCards) {
+            let r = Math.floor(Math.random() * cardsDataGreen.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataGreen[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataGreen[l].id) !== true) {
+                    if (cardsDataGreen[l].difficulty === 'hard' || cardsDataGreen[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataGreen[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.brownCards) {
+            let r = Math.floor(Math.random() * cardsDataBrown.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBrown[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBrown[l].id) !== true) {
+                    if (cardsDataBrown[l].difficulty === 'hard' || cardsDataBrown[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBrown[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    
+        ancientChoiseSubArr = []
+        while (ancientChoiseSubArr.length < ancientsData[cardNum].thirdStage.blueCards) {
+            let r = Math.floor(Math.random() * cardsDataBlue.length)
+            let l = r
+            if (ancientChoiseSubArr.includes(cardsDataBlue[l].id) !== true &&
+                ancientChoiseArr.flat().includes(cardsDataBlue[l].id) !== true) {
+                    if (cardsDataBlue[l].difficulty === 'hard' || cardsDataBlue[l].difficulty === 'normal') {
+                        ancientChoiseSubArr.push(cardsDataBlue[l].id)
+                    }
+            }
+        }
+        ancientChoiseArr.push(ancientChoiseSubArr)
+    }
+
     console.log(ancientChoiseArr)
 }
 

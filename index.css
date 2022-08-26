@@ -17,7 +17,7 @@ body {
     transition: background-image 1s ease-in-out;    
     margin: 0 auto;
     padding: 0 auto;
-    background-image: url(/assets/home.png);    
+    background-image: url(./assets/home.png);    
     overflow: hidden;
 }
 
@@ -99,7 +99,8 @@ body {
     background-color: rgb(44, 100, 117);
     color: rgb(206, 206, 210);
     border-radius: 8px;  
-    transition: 0.3s;  
+    transition: 0.3s;
+    font-size: 20px;  
 }
 
 .level-button:hover {
